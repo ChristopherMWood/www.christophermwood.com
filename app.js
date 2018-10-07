@@ -1,4 +1,4 @@
-var port = 3000;
+var port = 80;
 var express = require('express');
 var app = express();
 
@@ -17,6 +17,6 @@ app.get('*', function(request, response){
   response.sendFile('/404.html');
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('Site started on port ' + port);
 });
