@@ -13,8 +13,12 @@ app.get('/test', function (request, response) {
   response.send('testing');
 });
 
-app.get('*', function(request, response){
-  response.sendFile('/404.html');
+app.use(function(req, res, next) {
+  return res.status(404).send({ message: 'Route'+req.url+' Not found.' });
+});
+
+app.use(function(err, req, res, next) {
+  return res.status(500).send({ error: err });
 });
 
 app.listen(port, function () {

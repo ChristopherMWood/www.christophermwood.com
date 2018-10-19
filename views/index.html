@@ -5,60 +5,76 @@
         <meta charset="UTF-8">
         <meta name="author" content="Christopher Wood">
     </head>
-    <body>
-        <div id="sidebar" class="column">
-            Work in progress...
-            <footer>
-                <a id="github-link" href="https://www.github.com/ChristopherMWood">
-                    <img src="../images/GitHub-Mark-64px.png" alt="Christopher Wood Github">
-                </a>
-            </footer>
-        </div>
-        <div id="main-content" class="column">
+    <body id="page-body">
+        <div id="nav-component">
+            <h1>Christopher M. Wood</h1>
+            <label id="sofware-link" class="main-nav-link"><a href="software">Software</a></label>
+            <label id="tutoring-link" class="main-nav-link"><a href="software">Tutoring</a></label>
+            <label id="contact-link"class="main-nav-link"><a href="software">Contact</a></label>
         </div>
     </body>
 </html>
 
+<script>
+    // var softwareLink = document.getElementById("sofware-link");
+    // softwareLink.addEventListener("mouseover", function() { transitionBackgroundImage("../images/full_background.jpg") });
+
+    // var musicLink = document.getElementById("music-link");
+    // musicLink.addEventListener("mouseover", function() { transitionBackgroundImage("../images/full_background_1.jpg") });
+
+    // var contactLink = document.getElementById("contact-link");
+    // contactLink.addEventListener("mouseover", function() { transitionBackgroundImage("../images/full_background_2.jpg") });
+
+    // function transitionBackgroundImage(imageSrc) {
+    //     console.log(document.body.style.backgroundImage);
+    //     if (!document.body.style.backgroundImage.includes(imageSrc))
+    //         document.body.style.backgroundImage = "url('" + imageSrc + "')";
+    // };
+</script>
+
 <style>
-    #sidebar {
-        border-right: solid 2px black;
-        box-shadow: 2px;
-        flex-shrink: 0;  /*makes sure that content is not cut off in a smaller browser window*/
-        width: 20%;
-    }
-
-    .column {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
     html {
         height: 100%;
-    }
-
-    #main-content {
-        background: url(../images/profile_photo_full.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        flex-grow: 1;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     body {
-        height: 100%;   
-        overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
-        margin: 0px;  /*removes default style*/
-        display: flex;  /*enables flex content for its children*/
-        box-sizing: border-box;
-    }
-
-    footer {
+        height: 100%;
         width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        resize: vertical;
+        overflow: auto;
+    }
+    
+    h1 {
+        font-family: monospace;
+        font-size: 3em;
     }
 
-    #github-link {
-        display: block;
-        margin: 0 auto;
-        width: 64px;
+    #nav-component {
+        text-align: center;
+        resize: vertical;
+        overflow: auto;
+    }
+
+    .main-nav-link {
+        font-size: 1.3em;
+        width: 200px;
+        display: inline-block;
+    }
+
+    .main-nav-link a {
+        color: black;
+        text-decoration: none; /* no underline */
+    }
+
+    .main-nav-link a:hover {
+        border-bottom: solid 1px black;
     }
 </style>
