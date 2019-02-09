@@ -5,7 +5,7 @@ module.exports = function(app){
   });
 
   app.get('/software', function (request, response) {
-    response.send(getViewRoute('software'));
+    response.sendFile(getViewRoute('software'));
   });
 
   app.use(function (request, response, next) {
@@ -13,7 +13,7 @@ module.exports = function(app){
   });
  
   function getViewRoute(filename) {
-    return __dirname + '/views/' + filename + '.html';
+    return __dirname + '/' + filename + '.html';
   }
 
 }

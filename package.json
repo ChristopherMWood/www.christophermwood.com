@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "ava",
-    "start": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "production": "node app.js"
   },
   "author": "Christopher M. Wood",
   "license": "ISC",

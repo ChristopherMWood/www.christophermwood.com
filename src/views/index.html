@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="author" content="Christopher Wood">
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="popup.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     </head>
     <body id="page-body">
@@ -12,9 +13,21 @@
             <h1>Christopher M. Wood</h1>
             <label id="sofware-link" class="main-nav-link"><a href="software">Software</a></label>
             <label id="tutoring-link" class="main-nav-link"><a href="software">Tutoring</a></label>
-            <label id="contact-link"class="main-nav-link"><a href="software">Contact</a></label>
+            <label id="contact-link"class="main-nav-link"><a href="#contactPopup">Contact</a></label>
             <label id="surprise-link"class="main-nav-link"><a href="surprise">Surprise Me</a></label>
         </div>
+        <div id="contactPopup" class="overlay">
+            <div class="popup">
+              <h2>Send Me A Message</h2>
+              <a class="close" href="#">&times;</a>
+              <div class="content">
+                <input placeholder="name"/>
+                <input placeholder="e-mail"/>
+                <textarea placeholder="message content"></textarea>
+                <button onclick="">Send Message</button>
+              </div>
+            </div>
+          </div>
         <footer>
             <div id="github-link">
                 <a href="https://www.github.com/ChristopherMWood" target="_blank">
